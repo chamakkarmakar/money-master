@@ -4,6 +4,10 @@ function inputData(input){
     return inputValue;
 
 }
+function resultData(result){
+    const resultField = document.getElementById(result)
+    return resultField;
+}
 document.getElementById('calculate-btn').addEventListener('click',function(){
     const incomeValue = inputData('income');
     const foodValue = inputData('food');
@@ -12,8 +16,9 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
 
     const expense = foodValue + rentValue + clothValue;
     const balance = incomeValue - expense;
+
+    resultData('total-expense').innerText=expense;
+    resultData('balance').innerText=balance;
     
-    console.log(expense);
-    console.log(balance);
 
 });
