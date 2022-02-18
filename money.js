@@ -6,7 +6,7 @@ function inputData(input){
 }
 // result field handling
 function resultData(result){
-    const resultField = document.getElementById(result)
+    const resultField = document.getElementById(result);
     return resultField;
 }
 // Event for Calculate Button 
@@ -23,21 +23,21 @@ document.getElementById('calculate-btn').addEventListener('click',function(){
     // resultData('balance').innerText=balance;
 
     if (isNaN(incomeValue) || isNaN(foodValue) || isNaN(rentValue) || isNaN(clothValue)) {
-            alert("please give valid number")
+            alert("please give valid number");
         }
         else if (incomeValue < 0 || foodValue < 0 || rentValue < 0 || clothValue < 0) {
-            alert("please give positive type number")
+            alert("please give positive type number");
         }
 
         else {
             const expenses = foodValue + rentValue + clothValue;
             if (expenses > incomeValue) {
-                alert("you can not spent more money than income")
+                alert("you can not spent more money than income");
             }
             else {
                 resultData('total-expense').innerText = expenses;
                 const balance = incomeValue - expenses;
-                resultData('balance').innerText = balance
+                resultData('balance').innerText = balance;
             }
         }
 });
