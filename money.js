@@ -61,7 +61,4 @@ document.getElementById("save-btn").addEventListener("click", function () {
         resultData("remaining-balance").innerText = remainingBalnce;
     }
 
-    // const remainingBalnce = balance - savingAmount;
-    // resultData("remaining-balance").innerText = remainingBalnce;
-
 });
