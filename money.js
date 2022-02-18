@@ -20,7 +20,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         alert("please give valid number");
     }
     else if (incomeValue < 0 || foodValue < 0 || rentValue < 0 || clothValue < 0) {
-        alert("please give positive type number");
+        alert("please give positive number");
     }
 
     else {
@@ -32,6 +32,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
             resultData('total-expense').innerText = expenses;
             const balance = incomeValue - expenses;
             resultData('balance').innerText = balance;
+            
         }
     }
 });
@@ -47,7 +48,20 @@ document.getElementById("save-btn").addEventListener("click", function () {
 
     // remaining balance
     const balance = resultData("balance").innerText;
-    const remainingBalnce = balance - savingAmount;
-    resultData("remaining-balance").innerText = remainingBalnce;
+
+    if (savingAmount > balance) {
+        alert("you can not save more money than your balance");
+    }
+
+    else if (savingAmount < 0) (
+        alert("saving money can not be negetive")
+    )
+    else {
+        const remainingBalnce = balance - savingAmount
+        resultData("remaining-balance").innerText = remainingBalnce;
+    }
+
+    // const remainingBalnce = balance - savingAmount;
+    // resultData("remaining-balance").innerText = remainingBalnce;
 
 });
