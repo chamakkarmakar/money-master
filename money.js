@@ -48,6 +48,6 @@ document.getElementById("save-btn").addEventListener("click", function () {
     // remaining balance
     const balance = resultData("balance").innerText;
     const remainingBalnce = balance - savingAmount;
-    resultData("Remaining-Balance").innerText = remainingBalnce;
+    resultData("remaining-balance").innerText = remainingBalnce;
 
 });
